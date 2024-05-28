@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-public class Post {    // DB 객체 생성
+public class Board {    // DB 객체 생성
 
     /* Create Table */
     @Id // PK 설정

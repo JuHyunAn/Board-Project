@@ -4,9 +4,13 @@ import axios from 'axios';
 
 // Java 연동 확인용
 function selectData(){
-  axios.post('/testData', []) // "test01", "test02", "test03"
-      .then(function (res){
-        console.log(res)
+  axios
+      .post('/testData', []) // "test01", "test02", "test03"
+      .then(function (response) {
+          console.log(response);
+      })
+      .catch(function (error) {
+          console.log(error);
       });
 }
 
@@ -28,7 +32,9 @@ function App() {
         </a>
         {/* ReactTestController.java 연동 확인용 */}
         <div>
-          <button onClick={() =>selectData()}>콘솔확인</button>
+          <button onClick = {
+              () => selectData()
+          }>콘솔확인</button>
         </div>
       </header>
     </div>
