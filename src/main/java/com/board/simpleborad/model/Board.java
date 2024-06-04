@@ -30,5 +30,4 @@ public class Board {    // DB 객체 생성
     // lombok(@Data)에 의해 자동으로 getter, setter 생성
     // setTitle(), setAuthor(), setContent()
     // getTitle(), getAuthor(), getContent()
-
 }

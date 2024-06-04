@@ -2,7 +2,7 @@ package com.board.simpleborad.service;
 
 import com.board.simpleborad.model.Board;
 import com.board.simpleborad.reposistory.BoardRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,9 +11,10 @@ import java.util.List;
 
 @Service    // Interface를 가져와 객체 별 기능 생성
 @Transactional
+@AllArgsConstructor // Lombok에서 @Autowired 대체해서 사용
 public class BoardService {
 
-    @Autowired
+    // @Autowired
     private BoardRepository boardRepository;  // Interface 호출
 
 
