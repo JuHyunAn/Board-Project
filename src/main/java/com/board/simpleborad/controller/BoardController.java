@@ -51,7 +51,7 @@ public class BoardController {   // Service에서 만든 기능(각 Method)을 �
 ＃ 오류사항 정리
 Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)] with root cause..
     → 서버 내에 View를 구성하지 않고 별도로 프론트(React)를 구성했기 때문에,
-      @Controller로 의해 반환 될 View(JSP, Thymeleaf 등)가 없어 오류가 발생!
+      @Controller로 의해 반환 될 resources의 View(JSP, Thymeleaf 등)가 없어 오류가 발생!
     → 뷰가 아닌 데이터(JSON)를 반환하는 @RestController를 사용하여 데이터를 통신한다.
     → 기존에는 Controller의 URL자체가 해당하는 뷰 페이지를 호출했지만,
       별도로 구성한 경우에는 데이터(JSON)만 호출해서 분리된 프론트단의 뷰 페이지에 뿌려준다.

@@ -1,0 +1,13 @@
+.board-body {
+    margin-top: 6vw;
+    margin-left: 10vw;
+}
+
+.detail-item {
+    color: white;
+    height: 10vh;
+}
+
+.detail-header {
+    color: white;
+}
