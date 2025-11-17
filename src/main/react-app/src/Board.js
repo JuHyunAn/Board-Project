@@ -1,10 +1,11 @@
 import './style/Board.css';
 import './style/BoardDetail.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import React, {useEffect, useState} from "react";
-import axios from "axios";
+import React from "react";
 import BoardList from "./components/BoardList";
 import BoardDetail from "./components/BoardDetail";
+import BoardWrite from "./components/BoardWrite";
+import BoardEdit from "./components/BoardEdit";
 
 // User Custom HTML Elements = Component
 
@@ -41,13 +42,13 @@ function Nav(props) {
         lis.push(
             // 반복문은 key값 필수
             <li key={contents.id} className="List-nav">
-                <a className="nav-a"
-                   target="_blank" rel="noopener noreferrer"
+                <button className="nav-a"
                    onClick={(e) => {
+                       e.preventDefault();
                        props.clickFunction(contents.title); // alert 발생
                    }}>
                     {contents.title}
-                </a>
+                </button>
             </li>
         );
     }
@@ -84,6 +85,8 @@ function Board() {
                     {/* 기존 <table>태그를 컴포넌트로 변경 호출 */}
                     <Routes>
                         <Route path="/" element={<BoardList />} />
+                        <Route path="/board/write" element={<BoardWrite />} />
+                        <Route path="/board/edit/:id" element={<BoardEdit />} />
                         <Route path="/board/:id" element={<BoardDetail />} />
                     </Routes>
                 </div>
