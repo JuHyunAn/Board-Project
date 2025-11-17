@@ -5,6 +5,8 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import BoardList from "./components/BoardList";
 import BoardDetail from "./components/BoardDetail";
+import BoardWrite from "./components/BoardWrite";
+import BoardEdit from "./components/BoardEdit";
 
 // User Custom HTML Elements = Component
 
@@ -84,6 +86,8 @@ function Board() {
                     {/* 기존 <table>태그를 컴포넌트로 변경 호출 */}
                     <Routes>
                         <Route path="/" element={<BoardList />} />
+                        <Route path="/board/write" element={<BoardWrite />} />
+                        <Route path="/board/edit/:id" element={<BoardEdit />} />
                         <Route path="/board/:id" element={<BoardDetail />} />
                     </Routes>
                 </div>
