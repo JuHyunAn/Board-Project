@@ -1,8 +1,7 @@
 import './style/Board.css';
 import './style/BoardDetail.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import React, {useEffect, useState} from "react";
-import axios from "axios";
+import React from "react";
 import BoardList from "./components/BoardList";
 import BoardDetail from "./components/BoardDetail";
 import BoardWrite from "./components/BoardWrite";
@@ -43,13 +42,13 @@ function Nav(props) {
         lis.push(
             // 반복문은 key값 필수
             <li key={contents.id} className="List-nav">
-                <a className="nav-a"
-                   target="_blank" rel="noopener noreferrer"
+                <button className="nav-a"
                    onClick={(e) => {
+                       e.preventDefault();
                        props.clickFunction(contents.title); // alert 발생
                    }}>
                     {contents.title}
-                </a>
+                </button>
             </li>
         );
     }

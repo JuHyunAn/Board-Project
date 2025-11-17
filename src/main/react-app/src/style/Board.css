@@ -30,6 +30,11 @@ a {
 .nav-a {
     color: white;
     font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
 }
 
 .List-nav {
